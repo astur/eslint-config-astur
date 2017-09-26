@@ -1,6 +1,19 @@
 {
   "name": "eslint-config-astur",
   "version": "0.0.0",
+  "description": "Favorite eslint config of github/astur",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint -c index.js index.js"
+  },
+  "peerDependencies": {
+    "eslint": ">= 3"
+  },
+  "keywords": [
+    "eslintconfig",
+    "eslint",
+    "lint"
+  ],
   "author": "astur <astur@yandex.ru> (http://kozlov.am/)",
   "license": "MIT"
 }
