@@ -1,6 +1,6 @@
 # eslint-config-astur
 
-[eslint](https://eslint.org) config that I like to use sometime
+[eslint](https://eslint.org) config that I like to use
 
 [![NPM version][npm-image]][npm-url]
 
