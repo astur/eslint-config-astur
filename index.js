@@ -16,6 +16,7 @@ module.exports = {
         'eslint-comments',
         'no-loops',
         'sonarjs',
+        'promise',
     ],
     rules: {
         // unicorn:
@@ -125,6 +126,22 @@ module.exports = {
         'prefer-immediate-return': 'error',
         'prefer-single-boolean-return': 'error',
         'prefer-while': 'error',
+
+        // promise:
+        'catch-or-return': 'error',
+        'no-return-wrap': 'error',
+        'param-names': 'error',
+        'always-return': 'warn',
+        'no-native': 'off',
+        'no-nesting': 'warn',
+        'no-promise-in-callback': 'off',
+        'no-callback-in-promise': 'off',
+        'avoid-new': 'off',
+        'no-new-statics': 'error',
+        'no-return-in-finally': 'error',
+        'valid-params': 'error',
+        'prefer-await-to-then': 'off',
+        'prefer-await-to-callbacks': 'off',
 
         // CORE Eslint rules:
 
