@@ -17,6 +17,7 @@ module.exports = {
         'no-loops',
         'sonarjs',
         'promise',
+        'more',
     ],
     rules: {
         // unicorn:
@@ -142,6 +143,18 @@ module.exports = {
         'valid-params': 'error',
         'prefer-await-to-then': 'off',
         'prefer-await-to-callbacks': 'off',
+
+        // more:
+        'more/no-void-map': 'error',
+        'more/no-c-like-loops': 'warn',
+        'more/prefer-includes': 'error',
+        'more/no-then': 'off',
+        'more/no-window': 'error',
+        'more/no-numeric-endings-for-variables': 'off',
+        'more/no-filter-instead-of-find': 'error',
+        'more/force-native-methods': 'warn',
+        'more/no-duplicated-chains': 'off',
+        'more/classbody-starts-with-newline': 'off',
 
         // CORE Eslint rules:
 
