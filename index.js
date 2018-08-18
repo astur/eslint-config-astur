@@ -14,6 +14,7 @@ module.exports = {
         'node',
         'no-use-extend-native',
         'eslint-comments',
+        'no-loops',
     ],
     rules: {
         // unicorn:
@@ -103,6 +104,11 @@ module.exports = {
         'eslint-comments/no-unused-enable': 'error',
         'eslint-comments/no-restricted-disable': 'off',
         'eslint-comments/no-use': 'off',
+
+        // no-loops:
+        'no-loops/no-loops': 'off',
+
+        // CORE Eslint rules:
 
         // Possible Errors:
         'for-direction': 'error',
