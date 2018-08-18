@@ -12,6 +12,7 @@ module.exports = {
         'ava',
         'unicorn',
         'node',
+        'no-use-extend-native',
     ],
     rules: {
         // unicorn:
@@ -85,6 +86,9 @@ module.exports = {
         'node/prefer-global/process': 'error',
         'node/prefer-global/url-search-params': 'error',
         'node/prefer-global/url': 'error',
+
+        // no-use-extend-native:
+        'no-use-extend-native/no-use-extend-native': 'warn',
 
         // Possible Errors:
         'for-direction': 'error',
