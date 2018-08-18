@@ -13,6 +13,7 @@ module.exports = {
         'unicorn',
         'node',
         'no-use-extend-native',
+        'eslint-comments',
     ],
     rules: {
         // unicorn:
@@ -89,6 +90,19 @@ module.exports = {
 
         // no-use-extend-native:
         'no-use-extend-native/no-use-extend-native': 'warn',
+
+        //eslint-comments:
+        'eslint-comments/disable-enable-pair': [
+            'error',
+            {allowWholeFile: true},
+        ],
+        'eslint-comments/no-aggregating-enable': 'off',
+        'eslint-comments/no-duplicate-disable': 'error',
+        'eslint-comments/no-unlimited-disable': 'error',
+        'eslint-comments/no-unused-disable': 'error',
+        'eslint-comments/no-unused-enable': 'error',
+        'eslint-comments/no-restricted-disable': 'off',
+        'eslint-comments/no-use': 'off',
 
         // Possible Errors:
         'for-direction': 'error',
