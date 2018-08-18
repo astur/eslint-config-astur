@@ -78,7 +78,7 @@ module.exports = {
         'node/no-missing-require': 'error',
         'node/no-unpublished-bin': 'error',
         'node/no-unpublished-import': 'error',
-        'node/no-unpublished-require': 'error',
+        'node/no-unpublished-require': 'off',
         'node/no-unsupported-features/es-builtins': 'warn',
         'node/no-unsupported-features/es-syntax': 'warn',
         'node/no-unsupported-features/node-builtins': 'warn',
