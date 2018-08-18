@@ -9,6 +9,7 @@ module.exports = {
         es6: true,
     },
     rules: {
+        // Possible Errors:
         'for-direction': 'error',
         'getter-return': 'error',
         'no-async-promise-executor': 'off',
@@ -51,6 +52,8 @@ module.exports = {
             'error',
             {requireStringLiterals: true},
         ],
+
+        // Best Practices:
         'accessor-pairs': 'off',
         'array-callback-return': 'error',
         'block-scoped-var': 'off',
@@ -142,10 +145,14 @@ module.exports = {
             {functionPrototypeMethods: true},
         ],
         yoda: 'error',
+
+        // Strict Mode:
         strict: [
             'error',
             'never',
         ],
+
+        // Variables:
         'init-declarations': 'off',
         'no-delete-var': 'error',
         'no-label-var': 'off',
@@ -173,6 +180,8 @@ module.exports = {
             'error',
             'nofunc',
         ],
+
+        // Node.js and CommonJS:
         'callback-return': [
             'warn',
             [
@@ -199,6 +208,8 @@ module.exports = {
             'colors',
         ],
         'no-sync': 'off',
+
+        // Stylistic Issues:
         'array-bracket-newline': [
             'error',
             {multiline: true},
@@ -424,6 +435,8 @@ module.exports = {
             'never',
         ],
         'wrap-regex': 'off',
+
+        // ECMAScript 6:
         'arrow-body-style': 'error',
         'arrow-parens': [
             'error',
