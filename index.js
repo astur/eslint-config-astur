@@ -15,6 +15,7 @@ module.exports = {
         'no-use-extend-native',
         'eslint-comments',
         'no-loops',
+        'sonarjs',
     ],
     rules: {
         // unicorn:
@@ -107,6 +108,23 @@ module.exports = {
 
         // no-loops:
         'no-loops/no-loops': 'off',
+
+        // sonarjs:
+        'no-all-duplicated-branches': 'error',
+        'no-element-overwrite': 'error',
+        'no-extra-arguments': 'error',
+        'no-identical-conditions': 'error',
+        'no-identical-expressions': 'error',
+        'no-one-iteration-loop': 'error',
+        'no-use-of-empty-return-value': 'error',
+        'cognitive-complexity': 'off',
+        'no-duplicated-branches': 'error',
+        'no-identical-functions': 'error',
+        'no-redundant-boolean': 'error',
+        'no-small-switch': 'error',
+        'prefer-immediate-return': 'error',
+        'prefer-single-boolean-return': 'error',
+        'prefer-while': 'error',
 
         // CORE Eslint rules:
 
