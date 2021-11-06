@@ -198,7 +198,7 @@ module.exports = {
         // no-use-extend-native:
         'no-use-extend-native/no-use-extend-native': 'warn',
 
-        //eslint-comments:
+        // eslint-comments:
         'eslint-comments/disable-enable-pair': [
             'error',
             {allowWholeFile: true},
