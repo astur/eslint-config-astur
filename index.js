@@ -278,6 +278,8 @@ module.exports = {
         'more/force-native-methods': 'warn',
         'more/no-duplicated-chains': 'off',
         'more/classbody-starts-with-newline': 'off',
+        'more/no-hardcoded-password': 'off',
+        'more/no-hardcoded-configuration-data': 'off',
 
         // CORE Eslint rules:
 
