@@ -211,6 +211,8 @@ module.exports = {
         'eslint-comments/no-restricted-disable': 'off',
         'eslint-comments/no-use': 'off',
 
+        'eslint-comments/require-description': 'off',
+
         // no-loops:
         'no-loops/no-loops': 'off',
 
