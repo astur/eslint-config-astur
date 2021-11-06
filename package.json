@@ -21,6 +21,9 @@
     "eslint-plugin-sonarjs": "^0.10.0",
     "eslint-plugin-unicorn": "^38.0.0"
   },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  },
   "peerDependencies": {
     "eslint": "^7.32.0"
   },
