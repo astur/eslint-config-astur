@@ -176,6 +176,25 @@ module.exports = {
         'node/prefer-global/url-search-params': 'error',
         'node/prefer-global/url': 'error',
 
+        'node/handle-callback-err': 'off',
+        'node/no-callback-literal': 'off',
+        'node/no-exports-assign': 'off',
+        'node/no-new-require': 'off',
+        'node/no-path-concat': 'off',
+        'node/no-process-exit': 'off',
+        'node/callback-return': 'off',
+        'node/file-extension-in-import': 'off',
+        'node/global-require': 'off',
+        'node/no-mixed-requires': 'off',
+        'node/no-process-env': 'off',
+        'node/no-restricted-import': 'off',
+        'node/no-restricted-require': 'off',
+        'node/no-sync': 'off',
+        'node/prefer-global/text-decoder': 'off',
+        'node/prefer-global/text-encoder': 'off',
+        'node/prefer-promises/dns': 'off',
+        'node/prefer-promises/fs': 'off',
+
         // no-use-extend-native:
         'no-use-extend-native/no-use-extend-native': 'warn',
 
