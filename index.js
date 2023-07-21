@@ -60,7 +60,7 @@ module.exports = {
         'unicorn/no-static-only-class': 'error',
         'unicorn/no-thenable': 'error',
         'unicorn/no-this-assignment': 'error',
-        'unicorn/no-typeof-undefined': ["error", {"checkGlobalVariables": true}],
+        'unicorn/no-typeof-undefined': ['error', {checkGlobalVariables: true}],
         'unicorn/no-unnecessary-await': 'error',
         'unicorn/no-unreadable-array-destructuring': 'off',
         'unicorn/no-unreadable-iife': 'off',
@@ -130,7 +130,6 @@ module.exports = {
         'unicorn/template-indent': 'off',
         'unicorn/text-encoding-identifier-case': 'error',
         'unicorn/throw-new-error': 'error',
-
 
         // AVA:
         'ava/assertion-arguments': 'error',
