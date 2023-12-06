@@ -98,7 +98,7 @@ module.exports = {
         'unicorn/prefer-math-trunc': 'off',
         'unicorn/prefer-modern-dom-apis': 'off',
         'unicorn/prefer-modern-math-apis': 'off',
-        'unicorn/prefer-module': 'off', // future
+        'unicorn/prefer-module': 'error',
         'unicorn/prefer-native-coercion-functions': 'error',
         'unicorn/prefer-negative-index': 'error',
         'unicorn/prefer-node-protocol': 'error',
