@@ -7,6 +7,9 @@
   "scripts": {
     "test": "eslint -c index.js index.js"
   },
+  "engines": {
+    "node": ">=22.17"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/astur/eslint-config-astur.git"
