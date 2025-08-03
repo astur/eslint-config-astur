@@ -5,7 +5,7 @@
   "exports": "./index.js",
   "type": "module",
   "scripts": {
-    "test": "eslint -c index.js index.js"
+    "test": "eslint ./*.js"
   },
   "engines": {
     "node": ">=22.17"
