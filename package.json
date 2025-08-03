@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-astur",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Favorite eslint config of github/astur",
   "exports": "./index.js",
   "type": "module",
