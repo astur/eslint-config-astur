@@ -12,23 +12,11 @@ npm install eslint eslint-config-astur
 
 ## Usage
 
-1. Make `.eslintrc` like this:
+Make `eslint.config.js` like this:
 
-```json
-{
-    "extends": "astur"
-}
+```js
+export {default} from 'eslint-config-astur';
 ```
-
-2. In your `package.json` add something like this
-
-```json
-    "scripts": {
-        "test": "eslint ."
-    },
-```
-
-3. Run `npm test`
 
 ## License
 
