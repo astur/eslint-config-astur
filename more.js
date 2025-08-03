@@ -4,13 +4,11 @@ export default {
             create(context){
                 return {
                     ExpressionStatement(node){
-                        const whereAssignment = node.type === 'ExpressionStatement' &&
+                        if(
+                            node.type === 'ExpressionStatement' &&
                             node.expression.type === 'CallExpression' &&
-                            node.expression.callee &&
-                            node.expression.callee.property &&
-                            node.expression.callee.property.name === 'map';
-
-                        if(whereAssignment){
+                            node.expression?.callee?.property?.name === 'map'
+                        ){
                             context.report({
                                 node,
                                 message: 'Here you have to assign this expression to variable or add other function to map',
@@ -24,9 +22,7 @@ export default {
             create(context){
                 return {
                     ForStatement(node){
-                        const isFor = node.update.operator === '++' || node.update.operator === '+=';
-
-                        if(isFor){
+                        if(node.update.operator === '++' || node.update.operator === '+='){
                             context.report({
                                 node,
                                 message: 'Do not use c-like loop with i++ or i +=1, instead use forEach, Map, or For of',
@@ -40,27 +36,13 @@ export default {
             create(context){
                 return {
                     BinaryExpression(node){
-                        const left = node.left || {};
-                        const right = node.right || {};
-                        const operator = node.operator;
+                        if(node.left?.callee?.type !== 'MemberExpression' || node.left?.callee?.property?.name !== 'indexOf') return;
 
-                        const isIndexOfCall = left.callee &&
-                            left.callee.type === 'MemberExpression' &&
-                            left.callee.property.name === 'indexOf';
-
-                        if(!isIndexOfCall){
-                            return;
-                        }
-
-                        const compareWithMinusOne = right.operator === '-' && right.argument && right.argument.value === 1;
-                        const lessThanZero = operator === '<' && right.value === 0;
-                        const moreOrEqualThanZero = operator === '>=' && right.value === 0;
-
-                        const isIndexOfEqualToMinusOne = compareWithMinusOne ||
-                            lessThanZero ||
-                            moreOrEqualThanZero;
-
-                        if(isIndexOfEqualToMinusOne){
+                        if(
+                            node.right?.operator === '-' && node.right?.argument?.value === 1 ||
+                            node.operator === '<' && node.right?.value === 0 ||
+                            node.operator === '>=' && node.right?.value === 0
+                        ){
                             context.report({
                                 node,
                                 message: 'Do not use indexOf, instead use includes',
@@ -74,15 +56,13 @@ export default {
             create(context){
                 return {
                     CallExpression(node){
-                        const callee = node.callee;
-                        const objectName = callee.name || callee.object && callee.object.name;
+                        const objectName = node.callee?.name || node.callee?.object?.name;
                         const notAllowedMethods = [
                             'find', 'findIndex', 'indexOf', 'each', 'every', 'filter', 'includes', 'map',
                             'reduce', 'toLower', 'toUpper', 'trim', 'keys',
                         ];
 
-                        if((objectName === '_' || objectName === 'lodash' || objectName === 'underscore') &&
-            callee.property && notAllowedMethods.includes(callee.property.name)){
+                        if(['_', 'lodash', 'underscore'].includes(objectName) && notAllowedMethods.includes(node.callee?.property?.name)){
                             context.report({
                                 node,
                                 message: 'Do not use lodash methods, use native instead',
@@ -136,8 +116,7 @@ export default {
                     if(
                         memberExpressionsDepth > 1 ||
                         isInsideCallExpression ||
-                        !node.object ||
-                        node.object.type !== 'MemberExpression' ||
+                        node.object?.type !== 'MemberExpression' ||
                         node.computed
                     ){
                         return;
@@ -202,12 +181,12 @@ export default {
             create(context){
                 return {
                     MemberExpression(node){
-                        const property = node.property;
-                        const isPropertyZero = property.type === 'Literal' && property.value === 0;
-                        const isFilterExpression = node.object.type === 'CallExpression' && node.object.callee &&
-                    node.object.callee.property && node.object.callee.property.name === 'filter';
-
-                        if(isFilterExpression && isPropertyZero){
+                        if(
+                            node.property.type === 'Literal' &&
+                            node.property.value === 0 &&
+                            node.object.type === 'CallExpression' &&
+                            node.object?.callee?.property?.name === 'filter'
+                        ){
                             context.report({
                                 node,
                                 message: 'Do not use \'filter\' to find one element, use find method instead',
